@@ -25,6 +25,8 @@ while True:
 	if keys[K_a]: cursor_x -= 1
 	if keys[K_t]: cursor_x += 1
 	if keys[K_q]: save_image(screen)
+	if keys[K_w]: cursor_size += 1
+	if keys[K_f]: cursor_size -= 1
 
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT: sys.exit()
