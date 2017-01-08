@@ -13,14 +13,18 @@ clock = pygame.time.Clock()
 cursor_x, cursor_y = 0,0
 cursor_size = 2
 
+def save_image(screen):
+	pygame.image.save(screen, "screen.bmp")
+
 while True:
 	clock.tick(30)
 	keys = pygame.key.get_pressed()
 	if keys[K_ESCAPE]: sys.exit()
-	if keys[K_j]: cursor_y += 1
-	if keys[K_k]: cursor_y -= 1
-	if keys[K_h]: cursor_x -= 1
-	if keys[K_l]: cursor_x += 1
+	if keys[K_s]: cursor_y += 1
+	if keys[K_r]: cursor_y -= 1
+	if keys[K_a]: cursor_x -= 1
+	if keys[K_t]: cursor_x += 1
+	if keys[K_q]: save_image(screen)
 
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT: sys.exit()
