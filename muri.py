@@ -32,5 +32,5 @@ while True:
 		if event.type == pygame.QUIT: sys.exit()
 
 	screen.fill((0, 0, 0))
-	pygame.draw.rect(screen,(255,0,0),(cursor_x, cursor_y, 2, 2))
+	pygame.draw.rect(screen,(255,0,0),(cursor_x, cursor_y, cursor_size, cursor_size))
 	pygame.display.flip()	
